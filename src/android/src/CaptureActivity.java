@@ -257,7 +257,7 @@ public class CaptureActivity extends AppCompatActivity implements SurfaceHolder.
 
   void startCamera() {
     mCameraView = findViewById(getResources().getIdentifier("previewView", "id", getPackageName()));
-    mCameraView.setPreferredImplementationMode(PreviewView.ImplementationMode.TEXTURE_VIEW);
+    mCameraView.setImplementationMode(PreviewView.ImplementationMode.COMPATIBLE);
 
     Boolean rotateCamera = getIntent().getBooleanExtra("RotateCamera", false);
     if (rotateCamera) {
